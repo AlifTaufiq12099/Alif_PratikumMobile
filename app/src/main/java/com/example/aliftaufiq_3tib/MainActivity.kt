@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.aliftaufiq_3tib.databinding.ActivityMainBinding
+import com.example.aliftaufiq_3tib.pertemuan5.LimaActivity
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.snackbar.Snackbar
 
@@ -60,6 +61,10 @@ class MainActivity : AppCompatActivity() {
 //            val intent = Intent(this, LoginActivity::class.java)
 //            startActivity(intent)
             finish()
+        }
+        binding.btnToLima.setOnClickListener {
+            startActivity(Intent(this, LimaActivity::class.java))
+
         }
     }
 }
