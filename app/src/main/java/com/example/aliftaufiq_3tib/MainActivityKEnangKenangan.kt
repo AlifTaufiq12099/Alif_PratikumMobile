@@ -9,12 +9,12 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.aliftaufiq_3tib.databinding.ActivityMainBinding
-import com.example.aliftaufiq_3tib.pertemuan5.LimaActivity
-import com.example.aliftaufiq_3tib.pertemuan6.SixthActivity
+import com.example.aliftaufiq_3tib.Home.pertemuan5.LimaActivity
+import com.example.aliftaufiq_3tib.Home.pertemuan6.SixthActivity
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.snackbar.Snackbar
 
-class MainActivity : AppCompatActivity() {
+class MainActivityKEnangKenangan : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -84,10 +84,16 @@ class MainActivity : AppCompatActivity() {
                     editor.clear()
                     editor.apply()
                     dialog.dismiss()
-                    startActivity(Intent(this, LoginActivity::class.java))
+
+                    val intent = Intent(this@MainActivityKEnangKenangan, LoginActivity::class.java).apply {
+                        flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+                    }
+                    startActivity(intent)
                     finish()
                 }
-                .setNegativeButton("Batal") { dialog, _ -> dialog.dismiss() }
+                .setNegativeButton("Batal") { dialog, _ ->
+                    dialog.dismiss()
+                }
                 .show()
         }
     }

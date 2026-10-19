@@ -1,6 +1,5 @@
-package com.example.aliftaufiq_3tib.pertemuan6
+package com.example.aliftaufiq_3tib.Home.pertemuan6
 
-import android.content.Intent
 import android.os.Bundle
 import android.view.MenuItem
 import androidx.activity.enableEdgeToEdge
