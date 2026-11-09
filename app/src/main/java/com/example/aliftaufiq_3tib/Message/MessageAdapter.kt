@@ -6,6 +6,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
+import android.widget.Toast
+import androidx.core.content.ContentProviderCompat.requireContext
 import com.bumptech.glide.Glide
 import com.example.aliftaufiq_3tib.databinding.ItemMessageBinding
 import com.google.android.material.snackbar.Snackbar
@@ -25,6 +27,10 @@ class MessageAdapter(
         binding.textSender.text = data.senderName
         binding.textMessage.text = data.messageText
 
+
+
+
+
         view.setOnClickListener {
 
             val i = Intent(context, MessageActivity::class.java)
@@ -41,3 +47,9 @@ class MessageAdapter(
         return view
     }
 }
+
+//view.setOnClickListener {
+//
+//    val pesan = "Pesan dari ${data.senderName}: ${data.messageText}"
+//    Toast.makeText(context, pesan, Toast.LENGTH_SHORT).show()
+//}
